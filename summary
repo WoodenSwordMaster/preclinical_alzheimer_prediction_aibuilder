@@ -1,0 +1,14 @@
+preclinical_alzheimer_prediction_model
+-input = brain mri scan 3d 
+-output = แยกระหว่าง โรคอัลไซเมอร์ ภาวะหลงลืมๆทั่วไปของคนแก่ธรรมดา ภาวะหลงลืมๆทั่วไปของคนแก่ที่สามารถพัฒนาเป็นโรคอัลไซเมอร์ในอนาคต หรือคนธรรมดา 
+-เป็นโครงงานตอนม.5 ที่ทำกับโครงการ วมว แต่เอามาลองทำทุกอย่างที่อยากลองตอนม.5
+-dataset เอามาจากฐานข้อมูล ADNI
+-preprocess ด้วยโปรแกรม freesurfer pipeline recon-all 
+-augment train set เป็น 6 เท่าเนื่องจากขาดแคลน dataset ด้วย random swap กับ gamma
+-โมเดลเป็น 3d cnn
+-ขนาด data 96x96x96 น้อยไปโมเดลไม่รู้เรื่อง ควร 128x128x128 up
+-layer ของ cnn ควร 3 up 2 น้อยเกินไป
+-overfit อย่างรุนแรงจน acuuracy 0.25 เกือบเท่าเดา แต่ loss ยังลด
+github https://github.com/WoodenSwordMaster/preclinical_alzheimer_prediction_aibuilder/tree/main
+web https://sreamlitdeploypunnut-x5pkqwhfextt58to2en4ko.streamlit.app/
+medium https://medium.com/@punnut12345/ai-วินิจฉัยโรคอัลไซเมอร์ล่วงหน้าจากภาวะ-mci-ด้วยภาพถ่ายทางสมอง-5df95c707a23
