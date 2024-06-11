@@ -7,3 +7,4 @@
 3. ทำการเปลี่ยนไฟล์ .mgz เป็น .nii ซึ่งพร้อมใช้เป็น dataset ด้วย mgz_to_nii2.py
 4. ทำการแบ่ง train test และ augment ด้วย nii_preprocessing.py
 5. train model ด้วย model_3_80_2.py
+6. deploy ตัว model ขึ้นบน web ผ่านทาง deployment_2.py
